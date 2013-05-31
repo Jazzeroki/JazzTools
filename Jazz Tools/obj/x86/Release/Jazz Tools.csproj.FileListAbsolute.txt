@@ -1,0 +1,52 @@
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.config
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.manifest
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.application
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.MainForm.resources
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.Properties.Resources.resources
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe.manifest
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.application
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.dll
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Json.dll
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Sandbox.dll
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Json.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Sandbox.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.config
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.manifest
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.application
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jayrock.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Json.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Sandbox.pdb
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.csprojResolveAssemblyReference.cache
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.MainForm.resources
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.Properties.Resources.resources
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.csproj.GenerateResource.Cache
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe.manifest
+C:\Users\Alma\Desktop\New folder (3)\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.application
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.config
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.pdb
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe.manifest
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.application
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.pdb
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.pdb
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Json.pdb
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Sandbox.pdb
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.csprojResolveAssemblyReference.cache
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.MainForm.resources
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.Properties.Resources.resources
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.csproj.GenerateResource.Cache
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.exe.manifest
+C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.application

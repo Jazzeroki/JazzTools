@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{529ED0E3-EB55-4AC1-BC02-C62DCB445A03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jazz_Tools</RootNamespace>
+    <AssemblyName>Jazz Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Jazz\Desktop\Jazz Tools Beta 5\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>Jazz Tools</ProductName>
+    <PublisherName>Jazz</PublisherName>
+    <SuiteName>Jazz Tools</SuiteName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>5.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>84747C71423A589B9A9A6ED9489D42B3B7FB3524</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Jazz Tools_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Icon1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Jayrock">
+      <HintPath>..\..\Jayrock\bin\net-4.0\release\Jayrock.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Json">
+      <HintPath>..\..\Jayrock\bin\net-4.0\release\Jayrock.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Jayrock.Sandbox">
+      <HintPath>..\..\Jayrock\bin\net-4.0\release\Jayrock.Sandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LEWrapper\Archaeology.cs" />
+    <Compile Include="LEWrapper\BHG.cs" />
+    <Compile Include="LEWrapper\Body.cs" />
+    <Compile Include="LEWrapper\building.cs" />
+    <Compile Include="LEWrapper\Captcha.cs" />
+    <Compile Include="LEWrapper\Empire.cs" />
+    <Compile Include="LEWrapper\Inbox.cs" />
+    <Compile Include="LEWrapper\Intelligence.cs" />
+    <Compile Include="LEWrapper\LEDataStructures.cs" />
+    <Compile Include="LEWrapper\LEWrapper.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LEWrapper\Map.cs" />
+    <Compile Include="LEWrapper\modules.cs" />
+    <Compile Include="LEWrapper\Parliament.cs" />
+    <Compile Include="LEWrapper\PoliceStation.cs" />
+    <Compile Include="Program.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LEWrapper\Response.cs" />
+    <Compile Include="LEWrapper\StationCommand.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Jazz Tools_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JazzIcon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\50\algae0.png" />
+    <Content Include="Resources\50\algae1.png" />
+    <Content Include="Resources\50\algae2.png" />
+    <Content Include="Resources\50\algae3.png" />
+    <Content Include="Resources\50\algae4.png" />
+    <Content Include="Resources\50\algae5.png" />
+    <Content Include="Resources\50\algae6.png" />
+    <Content Include="Resources\50\algae7.png" />
+    <Content Include="Resources\50\algae8.png" />
+    <Content Include="Resources\50\algae9.png" />
+    <Content Include="Resources\50\algaepond1.png" />
+    <Content Include="Resources\50\amalgusmeadow1.png" />
+    <Content Include="Resources\50\apples0.png" />
+    <Content Include="Resources\50\apples1.png" />
+    <Content Include="Resources\50\apples2.png" />
+    <Content Include="Resources\50\apples3.png" />
+    <Content Include="Resources\50\apples4.png" />
+    <Content Include="Resources\50\apples5.png" />
+    <Content Include="Resources\50\apples6.png" />
+    <Content Include="Resources\50\apples7.png" />
+    <Content Include="Resources\50\apples8.png" />
+    <Content Include="Resources\50\apples9.png" />
+    <Content Include="Resources\50\archaeology0.png" />
+    <Content Include="Resources\50\archaeology1.png" />
+    <Content Include="Resources\50\archaeology2.png" />
+    <Content Include="Resources\50\archaeology3.png" />
+    <Content Include="Resources\50\archaeology4.png" />
+    <Content Include="Resources\50\archaeology5.png" />
+    <Content Include="Resources\50\archaeology6.png" />
+    <Content Include="Resources\50\archaeology7.png" />
+    <Content Include="Resources\50\archaeology8.png" />
+    <Content Include="Resources\50\archaeology9.png" />
+    <Content Include="Resources\50\artmuseum.png" />
+    <Content Include="Resources\50\atmosphericevaporator0.png" />
+    <Content Include="Resources\50\atmosphericevaporator1.png" />
+    <Content Include="Resources\50\atmosphericevaporator2.png" />
+    <Content Include="Resources\50\atmosphericevaporator3.png" />
+    <Content Include="Resources\50\atmosphericevaporator4.png" />
+    <Content Include="Resources\50\atmosphericevaporator5.png" />
+    <Content Include="Resources\50\atmosphericevaporator6.png" />
+    <Content Include="Resources\50\atmosphericevaporator7.png" />
+    <Content Include="Resources\50\atmosphericevaporator8.png" />
+    <Content Include="Resources\50\atmosphericevaporator9.png" />
+    <Content Include="Resources\50\beach101.png" />
+    <Content Include="Resources\50\beach11.png" />
+    <Content Include="Resources\50\beach111.png" />
+    <Content Include="Resources\50\beach121.png" />
+    <Content Include="Resources\50\beach131.png" />
+    <Content Include="Resources\50\beach21.png" />
+    <Content Include="Resources\50\beach31.png" />
+    <Content Include="Resources\50\beach41.png" />
+    <Content Include="Resources\50\beach51.png" />
+    <Content Include="Resources\50\beach61.png" />
+    <Content Include="Resources\50\beach71.png" />
+    <Content Include="Resources\50\beach81.png" />
+    <Content Include="Resources\50\beach91.png" />
+    <Content Include="Resources\50\beans0.png" />
+    <Content Include="Resources\50\beans1.png" />
+    <Content Include="Resources\50\beans2.png" />
+    <Content Include="Resources\50\beans3.png" />
+    <Content Include="Resources\50\beans4.png" />
+    <Content Include="Resources\50\beans5.png" />
+    <Content Include="Resources\50\beans6.png" />
+    <Content Include="Resources\50\beans7.png" />
+    <Content Include="Resources\50\beans8.png" />
+    <Content Include="Resources\50\beans9.png" />
+    <Content Include="Resources\50\beeldeban0.png" />
+    <Content Include="Resources\50\beeldeban1.png" />
+    <Content Include="Resources\50\beeldeban2.png" />
+    <Content Include="Resources\50\beeldeban3.png" />
+    <Content Include="Resources\50\beeldeban4.png" />
+    <Content Include="Resources\50\beeldeban5.png" />
+    <Content Include="Resources\50\beeldeban6.png" />
+    <Content Include="Resources\50\beeldeban7.png" />
+    <Content Include="Resources\50\beeldeban8.png" />
+    <Content Include="Resources\50\beeldeban9.png" />
+    <Content Include="Resources\50\beeldebannest1.png" />
+    <Content Include="Resources\50\blackholegenerator1.png" />
+    <Content Include="Resources\50\blank.png" />
+    <Content Include="Resources\50\bread0.png" />
+    <Content Include="Resources\50\bread1.png" />
+    <Content Include="Resources\50\bread2.png" />
+    <Content Include="Resources\50\bread3.png" />
+    <Content Include="Resources\50\bread4.png" />
+    <Content Include="Resources\50\bread5.png" />
+    <Content Include="Resources\50\bread6.png" />
+    <Content Include="Resources\50\bread7.png" />
+    <Content Include="Resources\50\bread8.png" />
+    <Content Include="Resources\50\bread9.png" />
+    <Content Include="Resources\50\burger0.png" />
+    <Content Include="Resources\50\burger1.png" />
+    <Content Include="Resources\50\burger2.png" />
+    <Content Include="Resources\50\burger3.png" />
+    <Content Include="Resources\50\burger4.png" />
+    <Content Include="Resources\50\burger5.png" />
+    <Content Include="Resources\50\burger6.png" />
+    <Content Include="Resources\50\burger7.png" />
+    <Content Include="Resources\50\burger8.png" />
+    <Content Include="Resources\50\burger9.png" />
+    <Content Include="Resources\50\cannery0.png" />
+    <Content Include="Resources\50\cannery1.png" />
+    <Content Include="Resources\50\cannery2.png" />
+    <Content Include="Resources\50\cannery3.png" />
+    <Content Include="Resources\50\cannery4.png" />
+    <Content Include="Resources\50\cannery5.png" />
+    <Content Include="Resources\50\cannery6.png" />
+    <Content Include="Resources\50\cannery7.png" />
+    <Content Include="Resources\50\cannery8.png" />
+    <Content Include="Resources\50\cannery9.png" />
+    <Content Include="Resources\50\capitol0.png" />
+    <Content Include="Resources\50\capitol1.png" />
+    <Content Include="Resources\50\capitol2.png" />
+    <Content Include="Resources\50\capitol3.png" />
+    <Content Include="Resources\50\capitol4.png" />
+    <Content Include="Resources\50\capitol5.png" />
+    <Content Include="Resources\50\capitol6.png" />
+    <Content Include="Resources\50\capitol7.png" />
+    <Content Include="Resources\50\capitol8.png" />
+    <Content Include="Resources\50\capitol9.png" />
+    <Content Include="Resources\50\cheese0.png" />
+    <Content Include="Resources\50\cheese1.png" />
+    <Content Include="Resources\50\cheese2.png" />
+    <Content Include="Resources\50\cheese3.png" />
+    <Content Include="Resources\50\cheese4.png" />
+    <Content Include="Resources\50\cheese5.png" />
+    <Content Include="Resources\50\cheese6.png" />
+    <Content Include="Resources\50\cheese7.png" />
+    <Content Include="Resources\50\cheese8.png" />
+    <Content Include="Resources\50\cheese9.png" />
+    <Content Include="Resources\50\chips0.png" />
+    <Content Include="Resources\50\chips1.png" />
+    <Content Include="Resources\50\chips2.png" />
+    <Content Include="Resources\50\chips3.png" />
+    <Content Include="Resources\50\chips4.png" />
+    <Content Include="Resources\50\chips5.png" />
+    <Content Include="Resources\50\chips6.png" />
+    <Content Include="Resources\50\chips7.png" />
+    <Content Include="Resources\50\chips8.png" />
+    <Content Include="Resources\50\chips9.png" />
+    <Content Include="Resources\50\cider0.png" />
+    <Content Include="Resources\50\cider1.png" />
+    <Content Include="Resources\50\cider2.png" />
+    <Content Include="Resources\50\cider3.png" />
+    <Content Include="Resources\50\cider4.png" />
+    <Content Include="Resources\50\cider5.png" />
+    <Content Include="Resources\50\cider6.png" />
+    <Content Include="Resources\50\cider7.png" />
+    <Content Include="Resources\50\cider8.png" />
+    <Content Include="Resources\50\cider9.png" />
+    <Content Include="Resources\50\citadelofknope1.png" />
+    <Content Include="Resources\50\cloakinglab0.png" />
+    <Content Include="Resources\50\cloakinglab1.png" />
+    <Content Include="Resources\50\cloakinglab2.png" />
+    <Content Include="Resources\50\cloakinglab3.png" />
+    <Content Include="Resources\50\cloakinglab4.png" />
+    <Content Include="Resources\50\cloakinglab5.png" />
+    <Content Include="Resources\50\cloakinglab6.png" />
+    <Content Include="Resources\50\cloakinglab7.png" />
+    <Content Include="Resources\50\cloakinglab8.png" />
+    <Content Include="Resources\50\cloakinglab9.png" />
+    <Content Include="Resources\50\command0.png" />
+    <Content Include="Resources\50\command1.png" />
+    <Content Include="Resources\50\command2.png" />
+    <Content Include="Resources\50\command3.png" />
+    <Content Include="Resources\50\command4.png" />
+    <Content Include="Resources\50\command5.png" />
+    <Content Include="Resources\50\command6.png" />
+    <Content Include="Resources\50\command7.png" />
+    <Content Include="Resources\50\command8.png" />
+    <Content Include="Resources\50\command9.png" />
+    <Content Include="Resources\50\corn0.png" />
+    <Content Include="Resources\50\corn1.png" />
+    <Content Include="Resources\50\corn2.png" />
+    <Content Include="Resources\50\corn3.png" />
+    <Content Include="Resources\50\corn4.png" />
+    <Content Include="Resources\50\corn5.png" />
+    <Content Include="Resources\50\corn6.png" />
+    <Content Include="Resources\50\corn7.png" />
+    <Content Include="Resources\50\corn8.png" />
+    <Content Include="Resources\50\corn9.png" />
+    <Content Include="Resources\50\crashedshipsite1.png" />
+    <Content Include="Resources\50\crater1.png" />
+    <Content Include="Resources\50\culinaryinstitute.png" />
+    <Content Include="Resources\50\dairy0.png" />
+    <Content Include="Resources\50\dairy1.png" />
+    <Content Include="Resources\50\dairy2.png" />
+    <Content Include="Resources\50\dairy3.png" />
+    <Content Include="Resources\50\dairy4.png" />
+    <Content Include="Resources\50\dairy5.png" />
+    <Content Include="Resources\50\dairy6.png" />
+    <Content Include="Resources\50\dairy7.png" />
+    <Content Include="Resources\50\dairy8.png" />
+    <Content Include="Resources\50\dairy9.png" />
+    <Content Include="Resources\50\dent1.png" />
+    <Content Include="Resources\50\dentonbrambles1.png" />
+    <Content Include="Resources\50\deployedbleeder1.png" />
+    <Content Include="Resources\50\devel0.png" />
+    <Content Include="Resources\50\devel1.png" />
+    <Content Include="Resources\50\devel2.png" />
+    <Content Include="Resources\50\devel3.png" />
+    <Content Include="Resources\50\devel4.png" />
+    <Content Include="Resources\50\devel5.png" />
+    <Content Include="Resources\50\devel6.png" />
+    <Content Include="Resources\50\devel7.png" />
+    <Content Include="Resources\50\devel8.png" />
+    <Content Include="Resources\50\devel9.png" />
+    <Content Include="Resources\50\distributioncenter0.png" />
+    <Content Include="Resources\50\distributioncenter1.png" />
+    <Content Include="Resources\50\distributioncenter2.png" />
+    <Content Include="Resources\50\distributioncenter3.png" />
+    <Content Include="Resources\50\distributioncenter4.png" />
+    <Content Include="Resources\50\distributioncenter5.png" />
+    <Content Include="Resources\50\distributioncenter6.png" />
+    <Content Include="Resources\50\distributioncenter7.png" />
+    <Content Include="Resources\50\distributioncenter8.png" />
+    <Content Include="Resources\50\distributioncenter9.png" />
+    <Content Include="Resources\50\embassy0.png" />
+    <Content Include="Resources\50\embassy1.png" />
+    <Content Include="Resources\50\embassy2.png" />
+    <Content Include="Resources\50\embassy3.png" />
+    <Content Include="Resources\50\embassy4.png" />
+    <Content Include="Resources\50\embassy5.png" />
+    <Content Include="Resources\50\embassy6.png" />
+    <Content Include="Resources\50\embassy7.png" />
+    <Content Include="Resources\50\embassy8.png" />
+    <Content Include="Resources\50\embassy9.png" />
+    <Content Include="Resources\50\energy-reserve0.png" />
+    <Content Include="Resources\50\energy-reserve1.png" />
+    <Content Include="Resources\50\energy-reserve2.png" />
+    <Content Include="Resources\50\energy-reserve3.png" />
+    <Content Include="Resources\50\energy-reserve4.png" />
+    <Content Include="Resources\50\energy-reserve5.png" />
+    <Content Include="Resources\50\energy-reserve6.png" />
+    <Content Include="Resources\50\energy-reserve7.png" />
+    <Content Include="Resources\50\energy-reserve8.png" />
+    <Content Include="Resources\50\energy-reserve9.png" />
+    <Content Include="Resources\50\entertainment0.png" />
+    <Content Include="Resources\50\entertainment1.png" />
+    <Content Include="Resources\50\entertainment2.png" />
+    <Content Include="Resources\50\entertainment3.png" />
+    <Content Include="Resources\50\entertainment4.png" />
+    <Content Include="Resources\50\entertainment5.png" />
+    <Content Include="Resources\50\entertainment6.png" />
+    <Content Include="Resources\50\entertainment7.png" />
+    <Content Include="Resources\50\entertainment8.png" />
+    <Content Include="Resources\50\entertainment9.png" />
+    <Content Include="Resources\50\espionage0.png" />
+    <Content Include="Resources\50\espionage1.png" />
+    <Content Include="Resources\50\espionage2.png" />
+    <Content Include="Resources\50\espionage3.png" />
+    <Content Include="Resources\50\espionage4.png" />
+    <Content Include="Resources\50\espionage5.png" />
+    <Content Include="Resources\50\espionage6.png" />
+    <Content Include="Resources\50\espionage7.png" />
+    <Content Include="Resources\50\espionage8.png" />
+    <Content Include="Resources\50\espionage9.png" />
+    <Content Include="Resources\50\essentiavein1.png" />
+    <Content Include="Resources\50\fission0.png" />
+    <Content Include="Resources\50\fission1.png" />
+    <Content Include="Resources\50\fission2.png" />
+    <Content Include="Resources\50\fission3.png" />
+    <Content Include="Resources\50\fission4.png" />
+    <Content Include="Resources\50\fission5.png" />
+    <Content Include="Resources\50\fission6.png" />
+    <Content Include="Resources\50\fission7.png" />
+    <Content Include="Resources\50\fission8.png" />
+    <Content Include="Resources\50\fission9.png" />
+    <Content Include="Resources\50\food-reserve0.png" />
+    <Content Include="Resources\50\food-reserve1.png" />
+    <Content Include="Resources\50\food-reserve2.png" />
+    <Content Include="Resources\50\food-reserve3.png" />
+    <Content Include="Resources\50\food-reserve4.png" />
+    <Content Include="Resources\50\food-reserve5.png" />
+    <Content Include="Resources\50\food-reserve6.png" />
+    <Content Include="Resources\50\food-reserve7.png" />
+    <Content Include="Resources\50\food-reserve8.png" />
+    <Content Include="Resources\50\food-reserve9.png" />
+    <Content Include="Resources\50\fusion0.png" />
+    <Content Include="Resources\50\fusion1.png" />
+    <Content Include="Resources\50\fusion2.png" />
+    <Content Include="Resources\50\fusion3.png" />
+    <Content Include="Resources\50\fusion4.png" />
+    <Content Include="Resources\50\fusion5.png" />
+    <Content Include="Resources\50\fusion6.png" />
+    <Content Include="Resources\50\fusion7.png" />
+    <Content Include="Resources\50\fusion8.png" />
+    <Content Include="Resources\50\fusion9.png" />
+    <Content Include="Resources\50\gas-giant-lab0.png" />
+    <Content Include="Resources\50\gas-giant-lab1.png" />
+    <Content Include="Resources\50\gas-giant-lab2.png" />
+    <Content Include="Resources\50\gas-giant-lab3.png" />
+    <Content Include="Resources\50\gas-giant-lab4.png" />
+    <Content Include="Resources\50\gas-giant-lab5.png" />
+    <Content Include="Resources\50\gas-giant-lab6.png" />
+    <Content Include="Resources\50\gas-giant-lab7.png" />
+    <Content Include="Resources\50\gas-giant-lab8.png" />
+    <Content Include="Resources\50\gas-giant-lab9.png" />
+    <Content Include="Resources\50\gas-giant-platform0.png" />
+    <Content Include="Resources\50\gas-giant-platform1.png" />
+    <Content Include="Resources\50\gas-giant-platform2.png" />
+    <Content Include="Resources\50\gas-giant-platform3.png" />
+    <Content Include="Resources\50\gas-giant-platform4.png" />
+    <Content Include="Resources\50\gas-giant-platform5.png" />
+    <Content Include="Resources\50\gas-giant-platform6.png" />
+    <Content Include="Resources\50\gas-giant-platform7.png" />
+    <Content Include="Resources\50\gas-giant-platform8.png" />
+    <Content Include="Resources\50\gas-giant-platform9.png" />
+    <Content Include="Resources\50\geneticslab0.png" />
+    <Content Include="Resources\50\geneticslab1.png" />
+    <Content Include="Resources\50\geneticslab2.png" />
+    <Content Include="Resources\50\geneticslab3.png" />
+    <Content Include="Resources\50\geneticslab4.png" />
+    <Content Include="Resources\50\geneticslab5.png" />
+    <Content Include="Resources\50\geneticslab6.png" />
+    <Content Include="Resources\50\geneticslab7.png" />
+    <Content Include="Resources\50\geneticslab8.png" />
+    <Content Include="Resources\50\geneticslab9.png" />
+    <Content Include="Resources\50\geo0.png" />
+    <Content Include="Resources\50\geo1.png" />
+    <Content Include="Resources\50\geo2.png" />
+    <Content Include="Resources\50\geo3.png" />
+    <Content Include="Resources\50\geo4.png" />
+    <Content Include="Resources\50\geo5.png" />
+    <Content Include="Resources\50\geo6.png" />
+    <Content Include="Resources\50\geo7.png" />
+    <Content Include="Resources\50\geo8.png" />
+    <Content Include="Resources\50\geo9.png" />
+    <Content Include="Resources\50\geothermalvent1.png" />
+    <Content Include="Resources\50\gratchsgauntlet1.png" />
+    <Content Include="Resources\50\greatballofjunk1.png" />
+    <Content Include="Resources\50\grove0.png" />
+    <Content Include="Resources\50\grove1.png" />
+    <Content Include="Resources\50\grove2.png" />
+    <Content Include="Resources\50\grove3.png" />
+    <Content Include="Resources\50\grove4.png" />
+    <Content Include="Resources\50\grove5.png" />
+    <Content Include="Resources\50\grove6.png" />
+    <Content Include="Resources\50\grove7.png" />
+    <Content Include="Resources\50\grove8.png" />
+    <Content Include="Resources\50\grove9.png" />
+    <Content Include="Resources\50\hallsofvrbansk1.png" />
+    <Content Include="Resources\50\hydrocarbon0.png" />
+    <Content Include="Resources\50\hydrocarbon1.png" />
+    <Content Include="Resources\50\hydrocarbon2.png" />
+    <Content Include="Resources\50\hydrocarbon3.png" />
+    <Content Include="Resources\50\hydrocarbon4.png" />
+    <Content Include="Resources\50\hydrocarbon5.png" />
+    <Content Include="Resources\50\hydrocarbon6.png" />
+    <Content Include="Resources\50\hydrocarbon7.png" />
+    <Content Include="Resources\50\hydrocarbon8.png" />
+    <Content Include="Resources\50\hydrocarbon9.png" />
+    <Content Include="Resources\50\ibs.png" />
+    <Content Include="Resources\50\intelligence0.png" />
+    <Content Include="Resources\50\intelligence1.png" />
+    <Content Include="Resources\50\intelligence2.png" />
+    <Content Include="Resources\50\intelligence3.png" />
+    <Content Include="Resources\50\intelligence4.png" />
+    <Content Include="Resources\50\intelligence5.png" />
+    <Content Include="Resources\50\intelligence6.png" />
+    <Content Include="Resources\50\intelligence7.png" />
+    <Content Include="Resources\50\intelligence8.png" />
+    <Content Include="Resources\50\intelligence9.png" />
+    <Content Include="Resources\50\inteltraining0.png" />
+    <Content Include="Resources\50\inteltraining1.png" />
+    <Content Include="Resources\50\inteltraining2.png" />
+    <Content Include="Resources\50\inteltraining3.png" />
+    <Content Include="Resources\50\inteltraining4.png" />
+    <Content Include="Resources\50\inteltraining5.png" />
+    <Content Include="Resources\50\inteltraining6.png" />
+    <Content Include="Resources\50\inteltraining7.png" />
+    <Content Include="Resources\50\inteltraining8.png" />
+    <Content Include="Resources\50\inteltraining9.png" />
+    <Content Include="Resources\50\interdimensionalrift1.png" />
+    <Content Include="Resources\50\junkhengesculpture1.png" />
+    <Content Include="Resources\50\kalavianruins1.png" />
+    <Content Include="Resources\50\kasternskeep1.png" />
+    <Content Include="Resources\50\lagoon0.png" />
+    <Content Include="Resources\50\lagoon1.png" />
+    <Content Include="Resources\50\lagoon2.png" />
+    <Content Include="Resources\50\lagoon3.png" />
+    <Content Include="Resources\50\lagoon4.png" />
+    <Content Include="Resources\50\lagoon5.png" />
+    <Content Include="Resources\50\lagoon6.png" />
+    <Content Include="Resources\50\lagoon7.png" />
+    <Content Include="Resources\50\lagoon8.png" />
+    <Content Include="Resources\50\lagoon9.png" />
+    <Content Include="Resources\50\lake1.png" />
+    <Content Include="Resources\50\lapis0.png" />
+    <Content Include="Resources\50\lapis1.png" />
+    <Content Include="Resources\50\lapis2.png" />
+    <Content Include="Resources\50\lapis3.png" />
+    <Content Include="Resources\50\lapis4.png" />
+    <Content Include="Resources\50\lapis5.png" />
+    <Content Include="Resources\50\lapis6.png" />
+    <Content Include="Resources\50\lapis7.png" />
+    <Content Include="Resources\50\lapis8.png" />
+    <Content Include="Resources\50\lapis9.png" />
+    <Content Include="Resources\50\lapisforest1.png" />
+    <Content Include="Resources\50\lcota.png" />
+    <Content Include="Resources\50\lcotb.png" />
+    <Content Include="Resources\50\lcotc.png" />
+    <Content Include="Resources\50\lcotd.png" />
+    <Content Include="Resources\50\lcote.png" />
+    <Content Include="Resources\50\lcotf.png" />
+    <Content Include="Resources\50\lcotg.png" />
+    <Content Include="Resources\50\lcoth.png" />
+    <Content Include="Resources\50\lcoti.png" />
+    <Content Include="Resources\50\libraryjith1.png" />
+    <Content Include="Resources\50\luxuryhousing0.png" />
+    <Content Include="Resources\50\luxuryhousing1.png" />
+    <Content Include="Resources\50\luxuryhousing2.png" />
+    <Content Include="Resources\50\luxuryhousing3.png" />
+    <Content Include="Resources\50\luxuryhousing4.png" />
+    <Content Include="Resources\50\luxuryhousing5.png" />
+    <Content Include="Resources\50\luxuryhousing6.png" />
+    <Content Include="Resources\50\luxuryhousing7.png" />
+    <Content Include="Resources\50\luxuryhousing8.png" />
+    <Content Include="Resources\50\luxuryhousing9.png" />
+    <Content Include="Resources\50\malcud0.png" />
+    <Content Include="Resources\50\malcud1.png" />
+    <Content Include="Resources\50\malcud2.png" />
+    <Content Include="Resources\50\malcud3.png" />
+    <Content Include="Resources\50\malcud4.png" />
+    <Content Include="Resources\50\malcud5.png" />
+    <Content Include="Resources\50\malcud6.png" />
+    <Content Include="Resources\50\malcud7.png" />
+    <Content Include="Resources\50\malcud8.png" />
+    <Content Include="Resources\50\malcud9.png" />
+    <Content Include="Resources\50\malcudfield1.png" />
+    <Content Include="Resources\50\massadshenge1.png" />
+    <Content Include="Resources\50\mayhemtraining0.png" />
+    <Content Include="Resources\50\mayhemtraining1.png" />
+    <Content Include="Resources\50\mayhemtraining2.png" />
+    <Content Include="Resources\50\mayhemtraining3.png" />
+    <Content Include="Resources\50\mayhemtraining4.png" />
+    <Content Include="Resources\50\mayhemtraining5.png" />
+    <Content Include="Resources\50\mayhemtraining6.png" />
+    <Content Include="Resources\50\mayhemtraining7.png" />
+    <Content Include="Resources\50\mayhemtraining8.png" />
+    <Content Include="Resources\50\mayhemtraining9.png" />
+    <Content Include="Resources\50\meal0.png" />
+    <Content Include="Resources\50\meal1.png" />
+    <Content Include="Resources\50\meal2.png" />
+    <Content Include="Resources\50\meal3.png" />
+    <Content Include="Resources\50\meal4.png" />
+    <Content Include="Resources\50\meal5.png" />
+    <Content Include="Resources\50\meal6.png" />
+    <Content Include="Resources\50\meal7.png" />
+    <Content Include="Resources\50\meal8.png" />
+    <Content Include="Resources\50\meal9.png" />
+    <Content Include="Resources\50\mercenariesguild0.png" />
+    <Content Include="Resources\50\mercenariesguild1.png" />
+    <Content Include="Resources\50\mercenariesguild2.png" />
+    <Content Include="Resources\50\mercenariesguild3.png" />
+    <Content Include="Resources\50\mercenariesguild4.png" />
+    <Content Include="Resources\50\mercenariesguild5.png" />
+    <Content Include="Resources\50\mercenariesguild6.png" />
+    <Content Include="Resources\50\mercenariesguild7.png" />
+    <Content Include="Resources\50\mercenariesguild8.png" />
+    <Content Include="Resources\50\mercenariesguild9.png" />
+    <Content Include="Resources\50\metaljunkarches1.png" />
+    <Content Include="Resources\50\mine0.png" />
+    <Content Include="Resources\50\mine1.png" />
+    <Content Include="Resources\50\mine2.png" />
+    <Content Include="Resources\50\mine3.png" />
+    <Content Include="Resources\50\mine4.png" />
+    <Content Include="Resources\50\mine5.png" />
+    <Content Include="Resources\50\mine6.png" />
+    <Content Include="Resources\50\mine7.png" />
+    <Content Include="Resources\50\mine8.png" />
+    <Content Include="Resources\50\mine9.png" />
+    <Content Include="Resources\50\miningministry0.png" />
+    <Content Include="Resources\50\miningministry1.png" />
+    <Content Include="Resources\50\miningministry2.png" />
+    <Content Include="Resources\50\miningministry3.png" />
+    <Content Include="Resources\50\miningministry4.png" />
+    <Content Include="Resources\50\miningministry5.png" />
+    <Content Include="Resources\50\miningministry6.png" />
+    <Content Include="Resources\50\miningministry7.png" />
+    <Content Include="Resources\50\miningministry8.png" />
+    <Content Include="Resources\50\miningministry9.png" />
+    <Content Include="Resources\50\missioncommand0.png" />
+    <Content Include="Resources\50\missioncommand1.png" />
+    <Content Include="Resources\50\missioncommand2.png" />
+    <Content Include="Resources\50\missioncommand3.png" />
+    <Content Include="Resources\50\missioncommand4.png" />
+    <Content Include="Resources\50\missioncommand5.png" />
+    <Content Include="Resources\50\missioncommand6.png" />
+    <Content Include="Resources\50\missioncommand7.png" />
+    <Content Include="Resources\50\missioncommand8.png" />
+    <Content Include="Resources\50\missioncommand9.png" />
+    <Content Include="Resources\50\munitionslab0.png" />
+    <Content Include="Resources\50\munitionslab1.png" />
+    <Content Include="Resources\50\munitionslab2.png" />
+    <Content Include="Resources\50\munitionslab3.png" />
+    <Content Include="Resources\50\munitionslab4.png" />
+    <Content Include="Resources\50\munitionslab5.png" />
+    <Content Include="Resources\50\munitionslab6.png" />
+    <Content Include="Resources\50\munitionslab7.png" />
+    <Content Include="Resources\50\munitionslab8.png" />
+    <Content Include="Resources\50\munitionslab9.png" />
+    <Content Include="Resources\50\naturalspring1.png" />
+    <Content Include="Resources\50\network190.png" />
+    <Content Include="Resources\50\network191.png" />
+    <Content Include="Resources\50\network192.png" />
+    <Content Include="Resources\50\network193.png" />
+    <Content Include="Resources\50\network194.png" />
+    <Content Include="Resources\50\network195.png" />
+    <Content Include="Resources\50\network196.png" />
+    <Content Include="Resources\50\network197.png" />
+    <Content Include="Resources\50\network198.png" />
+    <Content Include="Resources\50\network199.png" />
+    <Content Include="Resources\50\observatory0.png" />
+    <Content Include="Resources\50\observatory1.png" />
+    <Content Include="Resources\50\observatory2.png" />
+    <Content Include="Resources\50\observatory3.png" />
+    <Content Include="Resources\50\observatory4.png" />
+    <Content Include="Resources\50\observatory5.png" />
+    <Content Include="Resources\50\observatory6.png" />
+    <Content Include="Resources\50\observatory7.png" />
+    <Content Include="Resources\50\observatory8.png" />
+    <Content Include="Resources\50\observatory9.png" />
+    <Content Include="Resources\50\operahouse.png" />
+    <Content Include="Resources\50\oracleanid1.png" />
+    <Content Include="Resources\50\orerefinery0.png" />
+    <Content Include="Resources\50\orerefinery1.png" />
+    <Content Include="Resources\50\orerefinery2.png" />
+    <Content Include="Resources\50\orerefinery3.png" />
+    <Content Include="Resources\50\orerefinery4.png" />
+    <Content Include="Resources\50\orerefinery5.png" />
+    <Content Include="Resources\50\orerefinery6.png" />
+    <Content Include="Resources\50\orerefinery7.png" />
+    <Content Include="Resources\50\orerefinery8.png" />
+    <Content Include="Resources\50\orerefinery9.png" />
+    <Content Include="Resources\50\orestorage0.png" />
+    <Content Include="Resources\50\orestorage1.png" />
+    <Content Include="Resources\50\orestorage2.png" />
+    <Content Include="Resources\50\orestorage3.png" />
+    <Content Include="Resources\50\orestorage4.png" />
+    <Content Include="Resources\50\orestorage5.png" />
+    <Content Include="Resources\50\orestorage6.png" />
+    <Content Include="Resources\50\orestorage7.png" />
+    <Content Include="Resources\50\orestorage8.png" />
+    <Content Include="Resources\50\orestorage9.png" />
+    <Content Include="Resources\50\oversight0.png" />
+    <Content Include="Resources\50\oversight1.png" />
+    <Content Include="Resources\50\oversight2.png" />
+    <Content Include="Resources\50\oversight3.png" />
+    <Content Include="Resources\50\oversight4.png" />
+    <Content Include="Resources\50\oversight5.png" />
+    <Content Include="Resources\50\oversight6.png" />
+    <Content Include="Resources\50\oversight7.png" />
+    <Content Include="Resources\50\oversight8.png" />
+    <Content Include="Resources\50\oversight9.png" />
+    <Content Include="Resources\50\pancake0.png" />
+    <Content Include="Resources\50\pancake1.png" />
+    <Content Include="Resources\50\pancake2.png" />
+    <Content Include="Resources\50\pancake3.png" />
+    <Content Include="Resources\50\pancake4.png" />
+    <Content Include="Resources\50\pancake5.png" />
+    <Content Include="Resources\50\pancake6.png" />
+    <Content Include="Resources\50\pancake7.png" />
+    <Content Include="Resources\50\pancake8.png" />
+    <Content Include="Resources\50\pancake9.png" />
+    <Content Include="Resources\50\pantheonofhagness1.png" />
+    <Content Include="Resources\50\park0.png" />
+    <Content Include="Resources\50\park1.png" />
+    <Content Include="Resources\50\park2.png" />
+    <Content Include="Resources\50\park3.png" />
+    <Content Include="Resources\50\park4.png" />
+    <Content Include="Resources\50\park5.png" />
+    <Content Include="Resources\50\park6.png" />
+    <Content Include="Resources\50\park7.png" />
+    <Content Include="Resources\50\park8.png" />
+    <Content Include="Resources\50\park9.png" />
+    <Content Include="Resources\50\parliament.png" />
+    <Content Include="Resources\50\pie0.png" />
+    <Content Include="Resources\50\pie1.png" />
+    <Content Include="Resources\50\pie2.png" />
+    <Content Include="Resources\50\pie3.png" />
+    <Content Include="Resources\50\pie4.png" />
+    <Content Include="Resources\50\pie5.png" />
+    <Content Include="Resources\50\pie6.png" />
+    <Content Include="Resources\50\pie7.png" />
+    <Content Include="Resources\50\pie8.png" />
+    <Content Include="Resources\50\pie9.png" />
+    <Content Include="Resources\50\pilottraining0.png" />
+    <Content Include="Resources\50\pilottraining1.png" />
+    <Content Include="Resources\50\pilottraining2.png" />
+    <Content Include="Resources\50\pilottraining3.png" />
+    <Content Include="Resources\50\pilottraining4.png" />
+    <Content Include="Resources\50\pilottraining5.png" />
+    <Content Include="Resources\50\pilottraining6.png" />
+    <Content Include="Resources\50\pilottraining7.png" />
+    <Content Include="Resources\50\pilottraining8.png" />
+    <Content Include="Resources\50\pilottraining9.png" />
+    <Content Include="Resources\50\policestation.png" />
+    <Content Include="Resources\50\politicstraining0.png" />
+    <Content Include="Resources\50\politicstraining1.png" />
+    <Content Include="Resources\50\politicstraining2.png" />
+    <Content Include="Resources\50\politicstraining3.png" />
+    <Content Include="Resources\50\politicstraining4.png" />
+    <Content Include="Resources\50\politicstraining5.png" />
+    <Content Include="Resources\50\politicstraining6.png" />
+    <Content Include="Resources\50\politicstraining7.png" />
+    <Content Include="Resources\50\politicstraining8.png" />
+    <Content Include="Resources\50\politicstraining9.png" />
+    <Content Include="Resources\50\potato0.png" />
+    <Content Include="Resources\50\potato1.png" />
+    <Content Include="Resources\50\potato2.png" />
+    <Content Include="Resources\50\potato3.png" />
+    <Content Include="Resources\50\potato4.png" />
+    <Content Include="Resources\50\potato5.png" />
+    <Content Include="Resources\50\potato6.png" />
+    <Content Include="Resources\50\potato7.png" />
+    <Content Include="Resources\50\potato8.png" />
+    <Content Include="Resources\50\potato9.png" />
+    <Content Include="Resources\50\propulsion0.png" />
+    <Content Include="Resources\50\propulsion1.png" />
+    <Content Include="Resources\50\propulsion2.png" />
+    <Content Include="Resources\50\propulsion3.png" />
+    <Content Include="Resources\50\propulsion4.png" />
+    <Content Include="Resources\50\propulsion5.png" />
+    <Content Include="Resources\50\propulsion6.png" />
+    <Content Include="Resources\50\propulsion7.png" />
+    <Content Include="Resources\50\propulsion8.png" />
+    <Content Include="Resources\50\propulsion9.png" />
+    <Content Include="Resources\50\pyramidjunksculpture1.png" />
+    <Content Include="Resources\50\ravine1.png" />
+    <Content Include="Resources\50\rockyoutcrop1.png" />
+    <Content Include="Resources\50\roots0.png" />
+    <Content Include="Resources\50\roots1.png" />
+    <Content Include="Resources\50\roots2.png" />
+    <Content Include="Resources\50\roots3.png" />
+    <Content Include="Resources\50\roots4.png" />
+    <Content Include="Resources\50\roots5.png" />
+    <Content Include="Resources\50\roots6.png" />
+    <Content Include="Resources\50\roots7.png" />
+    <Content Include="Resources\50\roots8.png" />
+    <Content Include="Resources\50\roots9.png" />
+    <Content Include="Resources\50\sand0.png" />
+    <Content Include="Resources\50\sand1.png" />
+    <Content Include="Resources\50\sand2.png" />
+    <Content Include="Resources\50\sand3.png" />
+    <Content Include="Resources\50\sand4.png" />
+    <Content Include="Resources\50\sand5.png" />
+    <Content Include="Resources\50\sand6.png" />
+    <Content Include="Resources\50\sand7.png" />
+    <Content Include="Resources\50\sand8.png" />
+    <Content Include="Resources\50\sand9.png" />
+    <Content Include="Resources\50\saw0.png" />
+    <Content Include="Resources\50\saw1.png" />
+    <Content Include="Resources\50\saw2.png" />
+    <Content Include="Resources\50\saw3.png" />
+    <Content Include="Resources\50\saw4.png" />
+    <Content Include="Resources\50\saw5.png" />
+    <Content Include="Resources\50\saw6.png" />
+    <Content Include="Resources\50\saw7.png" />
+    <Content Include="Resources\50\saw8.png" />
+    <Content Include="Resources\50\saw9.png" />
+    <Content Include="Resources\50\security0.png" />
+    <Content Include="Resources\50\security1.png" />
+    <Content Include="Resources\50\security2.png" />
+    <Content Include="Resources\50\security3.png" />
+    <Content Include="Resources\50\security4.png" />
+    <Content Include="Resources\50\security5.png" />
+    <Content Include="Resources\50\security6.png" />
+    <Content Include="Resources\50\security7.png" />
+    <Content Include="Resources\50\security8.png" />
+    <Content Include="Resources\50\security9.png" />
+    <Content Include="Resources\50\shake0.png" />
+    <Content Include="Resources\50\shake1.png" />
+    <Content Include="Resources\50\shake2.png" />
+    <Content Include="Resources\50\shake3.png" />
+    <Content Include="Resources\50\shake4.png" />
+    <Content Include="Resources\50\shake5.png" />
+    <Content Include="Resources\50\shake6.png" />
+    <Content Include="Resources\50\shake7.png" />
+    <Content Include="Resources\50\shake8.png" />
+    <Content Include="Resources\50\shake9.png" />
+    <Content Include="Resources\50\shipyard0.png" />
+    <Content Include="Resources\50\shipyard1.png" />
+    <Content Include="Resources\50\shipyard2.png" />
+    <Content Include="Resources\50\shipyard3.png" />
+    <Content Include="Resources\50\shipyard4.png" />
+    <Content Include="Resources\50\shipyard5.png" />
+    <Content Include="Resources\50\shipyard6.png" />
+    <Content Include="Resources\50\shipyard7.png" />
+    <Content Include="Resources\50\shipyard8.png" />
+    <Content Include="Resources\50\shipyard9.png" />
+    <Content Include="Resources\50\singularity0.png" />
+    <Content Include="Resources\50\singularity1.png" />
+    <Content Include="Resources\50\singularity2.png" />
+    <Content Include="Resources\50\singularity3.png" />
+    <Content Include="Resources\50\singularity4.png" />
+    <Content Include="Resources\50\singularity5.png" />
+    <Content Include="Resources\50\singularity6.png" />
+    <Content Include="Resources\50\singularity7.png" />
+    <Content Include="Resources\50\singularity8.png" />
+    <Content Include="Resources\50\singularity9.png" />
+    <Content Include="Resources\50\spacejunkpark1.png" />
+    <Content Include="Resources\50\spaceport0.png" />
+    <Content Include="Resources\50\spaceport1.png" />
+    <Content Include="Resources\50\spaceport2.png" />
+    <Content Include="Resources\50\spaceport3.png" />
+    <Content Include="Resources\50\spaceport4.png" />
+    <Content Include="Resources\50\spaceport5.png" />
+    <Content Include="Resources\50\spaceport6.png" />
+    <Content Include="Resources\50\spaceport7.png" />
+    <Content Include="Resources\50\spaceport8.png" />
+    <Content Include="Resources\50\spaceport9.png" />
+    <Content Include="Resources\50\ssla0.png" />
+    <Content Include="Resources\50\ssla1.png" />
+    <Content Include="Resources\50\ssla2.png" />
+    <Content Include="Resources\50\ssla3.png" />
+    <Content Include="Resources\50\ssla4.png" />
+    <Content Include="Resources\50\ssla5.png" />
+    <Content Include="Resources\50\ssla6.png" />
+    <Content Include="Resources\50\ssla7.png" />
+    <Content Include="Resources\50\ssla8.png" />
+    <Content Include="Resources\50\ssla9.png" />
+    <Content Include="Resources\50\sslb0.png" />
+    <Content Include="Resources\50\sslb1.png" />
+    <Content Include="Resources\50\sslb2.png" />
+    <Content Include="Resources\50\sslb3.png" />
+    <Content Include="Resources\50\sslb4.png" />
+    <Content Include="Resources\50\sslb5.png" />
+    <Content Include="Resources\50\sslb6.png" />
+    <Content Include="Resources\50\sslb7.png" />
+    <Content Include="Resources\50\sslb8.png" />
+    <Content Include="Resources\50\sslb9.png" />
+    <Content Include="Resources\50\sslc0.png" />
+    <Content Include="Resources\50\sslc1.png" />
+    <Content Include="Resources\50\sslc2.png" />
+    <Content Include="Resources\50\sslc3.png" />
+    <Content Include="Resources\50\sslc4.png" />
+    <Content Include="Resources\50\sslc5.png" />
+    <Content Include="Resources\50\sslc6.png" />
+    <Content Include="Resources\50\sslc7.png" />
+    <Content Include="Resources\50\sslc8.png" />
+    <Content Include="Resources\50\sslc9.png" />
+    <Content Include="Resources\50\ssld0.png" />
+    <Content Include="Resources\50\ssld1.png" />
+    <Content Include="Resources\50\ssld2.png" />
+    <Content Include="Resources\50\ssld3.png" />
+    <Content Include="Resources\50\ssld4.png" />
+    <Content Include="Resources\50\ssld5.png" />
+    <Content Include="Resources\50\ssld6.png" />
+    <Content Include="Resources\50\ssld7.png" />
+    <Content Include="Resources\50\ssld8.png" />
+    <Content Include="Resources\50\ssld9.png" />
+    <Content Include="Resources\50\stationcommand.png" />
+    <Content Include="Resources\50\stockpile0.png" />
+    <Content Include="Resources\50\stockpile1.png" />
+    <Content Include="Resources\50\stockpile2.png" />
+    <Content Include="Resources\50\stockpile3.png" />
+    <Content Include="Resources\50\stockpile4.png" />
+    <Content Include="Resources\50\stockpile5.png" />
+    <Content Include="Resources\50\stockpile6.png" />
+    <Content Include="Resources\50\stockpile7.png" />
+    <Content Include="Resources\50\stockpile8.png" />
+    <Content Include="Resources\50\stockpile9.png" />
+    <Content Include="Resources\50\subspacesupplydepot1.png" />
+    <Content Include="Resources\50\supply_pod1.png" />
+    <Content Include="Resources\50\syrup0.png" />
+    <Content Include="Resources\50\syrup1.png" />
+    <Content Include="Resources\50\syrup2.png" />
+    <Content Include="Resources\50\syrup3.png" />
+    <Content Include="Resources\50\syrup4.png" />
+    <Content Include="Resources\50\syrup5.png" />
+    <Content Include="Resources\50\syrup6.png" />
+    <Content Include="Resources\50\syrup7.png" />
+    <Content Include="Resources\50\syrup8.png" />
+    <Content Include="Resources\50\syrup9.png" />
+    <Content Include="Resources\50\templedrajilites1.png" />
+    <Content Include="Resources\50\terraforminglab0.png" />
+    <Content Include="Resources\50\terraforminglab1.png" />
+    <Content Include="Resources\50\terraforminglab2.png" />
+    <Content Include="Resources\50\terraforminglab3.png" />
+    <Content Include="Resources\50\terraforminglab4.png" />
+    <Content Include="Resources\50\terraforminglab5.png" />
+    <Content Include="Resources\50\terraforminglab6.png" />
+    <Content Include="Resources\50\terraforminglab7.png" />
+    <Content Include="Resources\50\terraforminglab8.png" />
+    <Content Include="Resources\50\terraforminglab9.png" />
+    <Content Include="Resources\50\terraformingplatform0.png" />
+    <Content Include="Resources\50\terraformingplatform1.png" />
+    <Content Include="Resources\50\terraformingplatform2.png" />
+    <Content Include="Resources\50\terraformingplatform3.png" />
+    <Content Include="Resources\50\terraformingplatform4.png" />
+    <Content Include="Resources\50\terraformingplatform5.png" />
+    <Content Include="Resources\50\terraformingplatform6.png" />
+    <Content Include="Resources\50\terraformingplatform7.png" />
+    <Content Include="Resources\50\terraformingplatform8.png" />
+    <Content Include="Resources\50\terraformingplatform9.png" />
+    <Content Include="Resources\50\thedillonforge1.png" />
+    <Content Include="Resources\50\thefttraining0.png" />
+    <Content Include="Resources\50\thefttraining1.png" />
+    <Content Include="Resources\50\thefttraining2.png" />
+    <Content Include="Resources\50\thefttraining3.png" />
+    <Content Include="Resources\50\thefttraining4.png" />
+    <Content Include="Resources\50\thefttraining5.png" />
+    <Content Include="Resources\50\thefttraining6.png" />
+    <Content Include="Resources\50\thefttraining7.png" />
+    <Content Include="Resources\50\thefttraining8.png" />
+    <Content Include="Resources\50\thefttraining9.png" />
+    <Content Include="Resources\50\themepark0.png" />
+    <Content Include="Resources\50\themepark1.png" />
+    <Content Include="Resources\50\themepark2.png" />
+    <Content Include="Resources\50\themepark3.png" />
+    <Content Include="Resources\50\themepark4.png" />
+    <Content Include="Resources\50\themepark5.png" />
+    <Content Include="Resources\50\themepark6.png" />
+    <Content Include="Resources\50\themepark7.png" />
+    <Content Include="Resources\50\themepark8.png" />
+    <Content Include="Resources\50\themepark9.png" />
+    <Content Include="Resources\50\trade0.png" />
+    <Content Include="Resources\50\trade1.png" />
+    <Content Include="Resources\50\trade2.png" />
+    <Content Include="Resources\50\trade3.png" />
+    <Content Include="Resources\50\trade4.png" />
+    <Content Include="Resources\50\trade5.png" />
+    <Content Include="Resources\50\trade6.png" />
+    <Content Include="Resources\50\trade7.png" />
+    <Content Include="Resources\50\trade8.png" />
+    <Content Include="Resources\50\trade9.png" />
+    <Content Include="Resources\50\transporter0.png" />
+    <Content Include="Resources\50\transporter1.png" />
+    <Content Include="Resources\50\transporter2.png" />
+    <Content Include="Resources\50\transporter3.png" />
+    <Content Include="Resources\50\transporter4.png" />
+    <Content Include="Resources\50\transporter5.png" />
+    <Content Include="Resources\50\transporter6.png" />
+    <Content Include="Resources\50\transporter7.png" />
+    <Content Include="Resources\50\transporter8.png" />
+    <Content Include="Resources\50\transporter9.png" />
+    <Content Include="Resources\50\university0.png" />
+    <Content Include="Resources\50\university1.png" />
+    <Content Include="Resources\50\university2.png" />
+    <Content Include="Resources\50\university3.png" />
+    <Content Include="Resources\50\university4.png" />
+    <Content Include="Resources\50\university5.png" />
+    <Content Include="Resources\50\university6.png" />
+    <Content Include="Resources\50\university7.png" />
+    <Content Include="Resources\50\university8.png" />
+    <Content Include="Resources\50\university9.png" />
+    <Content Include="Resources\50\volcano1.png" />
+    <Content Include="Resources\50\warehouse.png" />
+    <Content Include="Resources\50\wastedigester0.png" />
+    <Content Include="Resources\50\wastedigester1.png" />
+    <Content Include="Resources\50\wastedigester2.png" />
+    <Content Include="Resources\50\wastedigester3.png" />
+    <Content Include="Resources\50\wastedigester4.png" />
+    <Content Include="Resources\50\wastedigester5.png" />
+    <Content Include="Resources\50\wastedigester6.png" />
+    <Content Include="Resources\50\wastedigester7.png" />
+    <Content Include="Resources\50\wastedigester8.png" />
+    <Content Include="Resources\50\wastedigester9.png" />
+    <Content Include="Resources\50\wasteenergy0.png" />
+    <Content Include="Resources\50\wasteenergy1.png" />
+    <Content Include="Resources\50\wasteenergy2.png" />
+    <Content Include="Resources\50\wasteenergy3.png" />
+    <Content Include="Resources\50\wasteenergy4.png" />
+    <Content Include="Resources\50\wasteenergy5.png" />
+    <Content Include="Resources\50\wasteenergy6.png" />
+    <Content Include="Resources\50\wasteenergy7.png" />
+    <Content Include="Resources\50\wasteenergy8.png" />
+    <Content Include="Resources\50\wasteenergy9.png" />
+    <Content Include="Resources\50\wasteexchanger0.png" />
+    <Content Include="Resources\50\wasteexchanger1.png" />
+    <Content Include="Resources\50\wasteexchanger2.png" />
+    <Content Include="Resources\50\wasteexchanger3.png" />
+    <Content Include="Resources\50\wasteexchanger4.png" />
+    <Content Include="Resources\50\wasteexchanger5.png" />
+    <Content Include="Resources\50\wasteexchanger6.png" />
+    <Content Include="Resources\50\wasteexchanger7.png" />
+    <Content Include="Resources\50\wasteexchanger8.png" />
+    <Content Include="Resources\50\wasteexchanger9.png" />
+    <Content Include="Resources\50\wasterecycling0.png" />
+    <Content Include="Resources\50\wasterecycling1.png" />
+    <Content Include="Resources\50\wasterecycling2.png" />
+    <Content Include="Resources\50\wasterecycling3.png" />
+    <Content Include="Resources\50\wasterecycling4.png" />
+    <Content Include="Resources\50\wasterecycling5.png" />
+    <Content Include="Resources\50\wasterecycling6.png" />
+    <Content Include="Resources\50\wasterecycling7.png" />
+    <Content Include="Resources\50\wasterecycling8.png" />
+    <Content Include="Resources\50\wasterecycling9.png" />
+    <Content Include="Resources\50\wastesequestration0.png" />
+    <Content Include="Resources\50\wastesequestration1.png" />
+    <Content Include="Resources\50\wastesequestration2.png" />
+    <Content Include="Resources\50\wastesequestration3.png" />
+    <Content Include="Resources\50\wastesequestration4.png" />
+    <Content Include="Resources\50\wastesequestration5.png" />
+    <Content Include="Resources\50\wastesequestration6.png" />
+    <Content Include="Resources\50\wastesequestration7.png" />
+    <Content Include="Resources\50\wastesequestration8.png" />
+    <Content Include="Resources\50\wastesequestration9.png" />
+    <Content Include="Resources\50\wastetreatment0.png" />
+    <Content Include="Resources\50\wastetreatment1.png" />
+    <Content Include="Resources\50\wastetreatment2.png" />
+    <Content Include="Resources\50\wastetreatment3.png" />
+    <Content Include="Resources\50\wastetreatment4.png" />
+    <Content Include="Resources\50\wastetreatment5.png" />
+    <Content Include="Resources\50\wastetreatment6.png" />
+    <Content Include="Resources\50\wastetreatment7.png" />
+    <Content Include="Resources\50\wastetreatment8.png" />
+    <Content Include="Resources\50\wastetreatment9.png" />
+    <Content Include="Resources\50\waterproduction0.png" />
+    <Content Include="Resources\50\waterproduction1.png" />
+    <Content Include="Resources\50\waterproduction2.png" />
+    <Content Include="Resources\50\waterproduction3.png" />
+    <Content Include="Resources\50\waterproduction4.png" />
+    <Content Include="Resources\50\waterproduction5.png" />
+    <Content Include="Resources\50\waterproduction6.png" />
+    <Content Include="Resources\50\waterproduction7.png" />
+    <Content Include="Resources\50\waterproduction8.png" />
+    <Content Include="Resources\50\waterproduction9.png" />
+    <Content Include="Resources\50\waterpurification0.png" />
+    <Content Include="Resources\50\waterpurification1.png" />
+    <Content Include="Resources\50\waterpurification2.png" />
+    <Content Include="Resources\50\waterpurification3.png" />
+    <Content Include="Resources\50\waterpurification4.png" />
+    <Content Include="Resources\50\waterpurification5.png" />
+    <Content Include="Resources\50\waterpurification6.png" />
+    <Content Include="Resources\50\waterpurification7.png" />
+    <Content Include="Resources\50\waterpurification8.png" />
+    <Content Include="Resources\50\waterpurification9.png" />
+    <Content Include="Resources\50\waterreclamation0.png" />
+    <Content Include="Resources\50\waterreclamation1.png" />
+    <Content Include="Resources\50\waterreclamation2.png" />
+    <Content Include="Resources\50\waterreclamation3.png" />
+    <Content Include="Resources\50\waterreclamation4.png" />
+    <Content Include="Resources\50\waterreclamation5.png" />
+    <Content Include="Resources\50\waterreclamation6.png" />
+    <Content Include="Resources\50\waterreclamation7.png" />
+    <Content Include="Resources\50\waterreclamation8.png" />
+    <Content Include="Resources\50\waterreclamation9.png" />
+    <Content Include="Resources\50\waterstorage0.png" />
+    <Content Include="Resources\50\waterstorage1.png" />
+    <Content Include="Resources\50\waterstorage2.png" />
+    <Content Include="Resources\50\waterstorage3.png" />
+    <Content Include="Resources\50\waterstorage4.png" />
+    <Content Include="Resources\50\waterstorage5.png" />
+    <Content Include="Resources\50\waterstorage6.png" />
+    <Content Include="Resources\50\waterstorage7.png" />
+    <Content Include="Resources\50\waterstorage8.png" />
+    <Content Include="Resources\50\waterstorage9.png" />
+    <Content Include="Resources\50\wheat0.png" />
+    <Content Include="Resources\50\wheat1.png" />
+    <Content Include="Resources\50\wheat2.png" />
+    <Content Include="Resources\50\wheat3.png" />
+    <Content Include="Resources\50\wheat4.png" />
+    <Content Include="Resources\50\wheat5.png" />
+    <Content Include="Resources\50\wheat6.png" />
+    <Content Include="Resources\50\wheat7.png" />
+    <Content Include="Resources\50\wheat8.png" />
+    <Content Include="Resources\50\wheat9.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz_Tools.MainForm.resources
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz_Tools.Properties.Resources.resources
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Debug\Jazz Tools.exe.config
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Debug\Jazz Tools.exe
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Debug\Jazz Tools.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz Tools.exe
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz Tools.pdb
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Debug\Jazz Tools.exe.manifest
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\bin\Debug\Jazz Tools.application
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz Tools.exe.manifest
+C:\Users\Jazz\Documents\Visual Studio 2010\Projects\Jazz Tools\Jazz Tools\obj\x86\Debug\Jazz Tools.application
