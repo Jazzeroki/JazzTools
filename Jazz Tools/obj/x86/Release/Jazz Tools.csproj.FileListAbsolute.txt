@@ -41,9 +41,6 @@ C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Re
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.application
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.exe
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jazz Tools.pdb
-C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.pdb
-C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Json.pdb
-C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\bin\Release\Jayrock.Sandbox.pdb
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz Tools.csprojResolveAssemblyReference.cache
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.MainForm.resources
 C:\Users\Alma\Documents\Visual Studio 2012\Projects\Jazz Tools\Jazz Tools\obj\x86\Release\Jazz_Tools.Properties.Resources.resources

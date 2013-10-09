@@ -100,6 +100,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JazzToolUtilities.cs" />
     <Compile Include="LEWrapper\Archaeology.cs" />
     <Compile Include="LEWrapper\BHG.cs" />
     <Compile Include="LEWrapper\Body.cs" />

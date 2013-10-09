@@ -11,7 +11,8 @@ namespace Jazz_Tools
         public String buildingID;
         public String buildingName;
         public string imageName;
-        public string buildingLevel; 
+        public string buildingLevel;
+        public string efficiency;
         public int x;
         public int y;
         public int buttonArrayIndex;
@@ -34,7 +35,8 @@ namespace Jazz_Tools
     {
         public string id = "0";
         public string imageName;
-        public string buildingLevel; 
+        public string buildingLevel;
+        public string efficiency;
         public int x = 0;
         public int y = 0;
     }

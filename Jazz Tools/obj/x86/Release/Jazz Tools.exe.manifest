@@ -43,50 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jayrock.dll" size="84480">
-      <assemblyIdentity name="Jayrock" version="0.9.12915.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jayrock.Json.dll" size="90112">
+      <assemblyIdentity name="Jayrock.Json" version="0.9.8316.0" language="neutral" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4+h9IC0bP48dtb/1gRpLv9CSIDcCglrwUA4XI5zoqZc=</dsig:DigestValue>
+        <dsig:DigestValue>sICJClPp21vrBE4gRWJ9UNIjeJXeeh+ZRYAOd2bKgXs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jayrock.Json.dll" size="126976">
-      <assemblyIdentity name="Jayrock.Json" version="0.9.12915.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>s9zxNNVHocGyRa7HbDBUe1IrzZ7u7F9UVwqxjMyXDYE=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jayrock.Sandbox.dll" size="7680">
-      <assemblyIdentity name="Jayrock.Sandbox" version="0.9.12915.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>e1kg+asYLj4MBYpDDtFqOQDtdpT82EyKhh5DzpncHBI=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jazz Tools.exe" size="6218752">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Jazz Tools.exe" size="11297792">
       <assemblyIdentity name="Jazz Tools" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>c9i0PR5IKymbetkQ3NJU/XqNMqgluDu+LoNCYJUXJcY=</dsig:DigestValue>
+        <dsig:DigestValue>fa3J/fvndeePsvgcmq6BuwsNn13gQR2BMIFkRuEh0jE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

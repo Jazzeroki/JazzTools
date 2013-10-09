@@ -126,7 +126,7 @@ namespace LE_Wrapper
         }
         void timer_Tick(object sender, EventArgs e)
         {
-            rpcCount = 0;                    // Alert the user
+            rpcCount = 0;//resets rpc count to 0 every 60 seconds                    
         }
         private void WriteStringToLog(string toWrite)
         {
@@ -263,7 +263,7 @@ namespace LE_Wrapper
             }
 
         }
-        private async void PostAsync(string url, JsonTextWriter json)
+        private async Task<int> PostAsync(string url, JsonTextWriter json)
         {
             while (rpcCount > 50)
             { }//This creates the wait time until rpc count is reset.
@@ -276,6 +276,7 @@ namespace LE_Wrapper
             WriteStringToLog(jsonToSend);
             var httpClient = new HttpClient();
             var response = await httpClient.PostAsync(server, new StringContent(jsonToSend));
+            //var response = await httpClient.PostAsync(server, new StringContent(jsonToSend));
             //response.EnsureSuccessStatusCode();
             string responseFromServer = await response.Content.ReadAsStringAsync();
             WriteStringToLog("response");
@@ -293,6 +294,7 @@ namespace LE_Wrapper
 
                 ServerResponseEvent(this, r);
             }
+            return 1;
         }
         public void CloseLog() //obsolete
         {

@@ -13,17 +13,21 @@ using Jayrock;
 using Jayrock.Json;
 using LE_Wrapper;
 using LEWrapperResponse;
+using System.Threading.Tasks;
+using System.Threading;
+using JazzToolUtilities;
 
 
 namespace Jazz_Tools
 {
     public partial class MainForm : Form
     {
-        string apiKey = "6266769d-1f73-4325-a40f-6660c4c6440d";
+        Response currentPlanetResponse;
+        //string apiKey = "6266769d-1f73-4325-a40f-6660c4c6440d";
         string url;
-        string sessionId;
-        string requestType;
-        string body_id;
+        //string sessionId;
+        //string requestType;
+        //string body_id;
         string labelImageName = string.Empty; //used in place of an imagenamelabel
         ButtonPlanetMap[] buttonArray = new ButtonPlanetMap[121];
         //BuildingInfo
@@ -32,6 +36,23 @@ namespace Jazz_Tools
         private LEWrapper le;
         private Dictionary<string, string> planets;
         private string homePlanetID;
+        private async Task<Dictionary<string, string>> GetDamagedBuildings()
+        {
+            //Task<Dictionary<string, string>> damagedBuildings = new Task<Dictionary<string,string>>();
+            Dictionary<string, string> d = new Dictionary<string, string>();
+            foreach (ButtonPlanetMap i in buttonArray)
+            {
+                //Dictionary<string, string> d = new Dictionary<string,string>();
+                if (Convert.ToInt32(i.efficiency) < 100)
+                {
+                    d.Add(i.buildingID.ToString(), i.buildingName);
+                    //(Dictionary<string, string>)damagedBuildings.
+                }
+            }
+            //damagedBuildings = Cast d;
+            //return damagedBuildings;
+            return d;
+        }
         public void SetXYValuesToarrayPlanetMap()
         {
             int x = -5;
@@ -52,6 +73,7 @@ namespace Jazz_Tools
         }//writes x and y values to the planetmaparray
         public void MapBuildingInfoToArrayPlanetMap(Dictionary<string, Response.Result.Building> Buildings)  //Change in development
         {
+            //labelStatusText.Text = "DrawingPlanetMap()";
             foreach (KeyValuePair<string, Response.Result.Building> buildingCopy in Buildings)
             {
                 var result = from v in arrayPlanetMap
@@ -69,10 +91,12 @@ namespace Jazz_Tools
         {
             //BHGID = string.Empty;
             //ForgeID = string.Empty;
+            labelStatusText.Text = "ClearPlanetMap()";
             labelBuildingID.Text = "Building ID";
             labelBuildingLevel.Text = "Building Level";
             labelBuildingName.Text = "Building Name";
             labelBuildingID.Text = "Building ID";
+            labelBuildingEfficiency.Text = "Building Efficiency";
             labelImageName = string.Empty;
             try
             {
@@ -81,9 +105,11 @@ namespace Jazz_Tools
                     buttonArray[i].buildingID = string.Empty;
                     buttonArray[i].buildingName = string.Empty;
                     buttonArray[i].buildingLevel = string.Empty;
+                    buttonArray[i].efficiency = string.Empty;
                     buttonArray[i].Text = string.Empty;
                     buttonArray[i].imageName = string.Empty;
-                    buttonArray[i].BackgroundImage = imageListBuildingImages.Images["blank.png"];
+                    buttonArray[i].Image = imageListBuildingImages.Images["blank.png"];
+                    buttonArray[i].Image = imageListBuildingImages.Images[""];
                 }
                 //MessageBox.Show("Map Cleared");
             }
@@ -99,6 +125,7 @@ namespace Jazz_Tools
             labelBuildingX.Hide();
             labelBuildingY.Hide();
             labelBuildingLevel.Hide();
+            labelBuildingEfficiency.Hide();
             buttonRearrangeBuildings.Hide();
             buttonRearrangeInfo.Hide();
 
@@ -110,6 +137,7 @@ namespace Jazz_Tools
             labelBuildingX.Show();
             labelBuildingY.Show();
             labelBuildingLevel.Show();
+            labelBuildingEfficiency.Show();
             buttonRearrangeBuildings.Show();
             buttonRearrangeInfo.Show();
         }
@@ -117,14 +145,10 @@ namespace Jazz_Tools
         public void ShowPlanetSelectMenu()
         {
             cbPlanetsList.Show();
-            buttonGetBodyData.Show();
-            buttonLoadPlanetInfo.Show();
         }
         public void HidePlanetSelectMenu()
         {
             cbPlanetsList.Hide();
-            buttonGetBodyData.Hide();
-            buttonLoadPlanetInfo.Hide();
         }
         public void HideServerSelectMenu()
         {
@@ -159,12 +183,23 @@ namespace Jazz_Tools
 
         }
 
-
+        public delegate void s();
         public void DrawPlanetMap()
         {
+            
+            // labelStatusText.Text = "DrawingPlanetMap()";
             imageListBuildingImages.TransparentColor = Color.White;
-            HidePlanetSelectMenu();
-            RearrangeControlsShow();
+            //HidePlanetSelectMenu();
+           /*if (this.InvokeRequired)
+            {
+               Invoke((RearrangeControlsShow) =>)
+                s S = new s(RearrangeControlsShow);
+                Invoke(S);
+                //public delegate string simple;
+
+            };
+            //Invoke(()=>RearrangeControlsShow);
+            * */
             int horizontal = 1;
             int horizontalend = 550;
             int vertical = 1;
@@ -180,9 +215,11 @@ namespace Jazz_Tools
                 buttonArray[i].buttonArrayIndex = i;
                 buttonArray[i].buildingName = "";
                 buttonArray[i].buildingID = "";
+                buttonArray[i].efficiency = "";
                 buttonArray[i].x = x++;
                 buttonArray[i].y = y;
-                buttonArray[i].BackgroundImage = imageListBuildingImages.Images["blank.png"];
+                buttonArray[i].Image = imageListBuildingImages.Images["blank.png"];
+                buttonArray[i].Image = imageListBuildingImages.Images[""];
                 if (x == 6)
                 {
                     --y;
@@ -195,12 +232,22 @@ namespace Jazz_Tools
                     vertical += 50;
                 }
                 buttonArray[i].Click += new EventHandler(ClickBuildingSwap);
-                this.Controls.Add(buttonArray[i]); //without this the buttons won't add
+                
+                //this.Controls.Add(buttonArray[i]); //without this the buttons won't add
             }
+            //Task d = new Task();
+            //return 42;
         }//creates the button array and maps out the buildings
+        private void ShowButtonsOnForm()
+        {
+            for (int i = 0; i < 121; i++)
+                this.Controls.Add(buttonArray[i]); //without this the buttons won't add
+            
+        }
         public void PopulatePlanetMap(Dictionary<string, Response.Result.Building> Buildings) //converts the building info dictionary into an array
         {
             //Dictionary<string, BuildingInfo> buildings = Buildings;
+            labelStatusText.Text = "Populating Planet Map";
             foreach (KeyValuePair<string, Response.Result.Building> buildingCopy in Buildings)
             {
                 var result = from v in buttonArray
@@ -212,10 +259,12 @@ namespace Jazz_Tools
                     buttonArray[i].buildingName = buildingCopy.Value.name;
                     buttonArray[i].Text = buildingCopy.Value.level;
                     buttonArray[i].buildingLevel = buildingCopy.Value.level;
+                    buttonArray[i].efficiency = buildingCopy.Value.efficiency;
                     buttonArray[i].imageName = buildingCopy.Value.image + ".png";
-                    buttonArray[i].BackgroundImage = imageListBuildingImages.Images[buttonArray[i].imageName];
+                    buttonArray[i].Image = imageListBuildingImages.Images[buttonArray[i].imageName];
                 }
             }
+            labelStatusText.Text = "Planet Map Populated";
         }//creates the button array and maps out the buildings
         public MainForm()
         {
@@ -232,6 +281,7 @@ namespace Jazz_Tools
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            labelStatusText.Text = "logging in";
             LoginMenuHide();
             HideBetaWarningLabel();
             le = new LEWrapper(userNameBox.Text, passwordBox.Text, url);
@@ -247,35 +297,29 @@ namespace Jazz_Tools
                         homePlanetID = r.result.status.empire.home_planet_id;
                         planets = r.result.status.empire.planets;
                         planets = planets.OrderBy(x => x.Value).ToDictionary(x => x.Key, x => x.Value); //alphabetizes planets according to value
-                        DrawPlanetMap();
-                        ShowPlanetSelectMenu();
+                        labelStatusText.Text = "Please wait a few moments. Drawing Planet Map";
 
+                        //Task d = new Task();
+                        //await DrawPlanetMap();
+                        
+                        //var thread = new Thread(()=>DrawPlanetMap());
+                       
+                        //thread.Start();
+                        //thread.Join();
+                        DrawPlanetMap();
+                        ShowButtonsOnForm();
+                        RearrangeControlsShow();
+                        //DrawPlanetMap();
+                        ShowPlanetSelectMenu();
                         cbPlanetsList.ValueMember = "Key";
                         cbPlanetsList.DisplayMember = "Value";
                         cbPlanetsList.DataSource = new BindingSource(planets, null);
                         cbPlanetsList.SelectedValue = homePlanetID;
                     }
-                        //MessageBox.Show("got here");
-                        //cbPlanetsList.DisplayMember(planets, homePlanetID);
+
 
                 };
-            /*
-            if (response != "failure")
-            {
-                LoginResponse loginResponse = js.Deserialize<LoginResponse>(response);
-                sessionId = loginResponse.result.session_id;
-                DrawPlanetMap();
-                ShowPlanetSelectMenu();
 
-                cbPlanetsList.ValueMember = "Key";
-                cbPlanetsList.DisplayMember = "Value";
-                cbPlanetsList.DataSource = new BindingSource(loginResponse.result.status.empire.planets, null);
-            }
-            else
-            {
-                LoginMenuShow();
-                MessageBox.Show("Invalid Username/Password");
-            }*/
         }
 
         private void us1_Click(object sender, EventArgs e)
@@ -292,7 +336,7 @@ namespace Jazz_Tools
             LoginMenuShow();
         }
 
-        private void buttonGetBodyData_Click(object sender, EventArgs e) //rewrite to use new framework
+/*        private void buttonGetBodyData_Click(object sender, EventArgs e) //rewrite to use new framework
         {
             ClearPlanetMap();
             le.BodyGetBuildings(cbPlanetsList.SelectedValue.ToString());
@@ -306,27 +350,14 @@ namespace Jazz_Tools
                     PopulatePlanetMap(r.result.buildings);
                 }
             };
-            /*
-            requestType = "get_buildings";
-            //BasicRequest basicServerRequest = new BasicRequest();
-            basicServerRequest.method = requestType;
-            string bodyId = Convert.ToString(cbPlanetsList.SelectedValue);
-            body_id = bodyId;//sets the form variable body_id which is used when sending the rearranged buildings
-            basicServerRequest.@params = new string[] { sessionId, bodyId };
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            string json = js.Serialize(basicServerRequest); //serializes the login request
-            string uri = url + "body";
-            string response = ConnectionManager(json, uri);
-            Get_Buildings getBuildings = js.Deserialize<Get_Buildings>(response);
-            PopulatePlanetMap(getBuildings.result.buildings);
-             * */
-        }
+        } */  //commenting out to test before total deletion
         private class PlanetMap
         {
             public string buildingID = string.Empty;
             public string buildingName = string.Empty;
             public string buildingLevel = string.Empty;
             public string imageName = string.Empty;
+            public string efficiency = string.Empty;
         
         }
         private void ClickBuildingSwap(object sender, EventArgs e)
@@ -336,6 +367,7 @@ namespace Jazz_Tools
                 labelBuildingID.Text = string.Empty;
                 labelBuildingName.Text = string.Empty;
                 labelBuildingLevel.Text = string.Empty;
+                labelBuildingEfficiency.Text = string.Empty;
                 labelImageName = string.Empty;
             }
             //string labelImageName = string.Empty; //used in place of an imagenamelabel
@@ -344,6 +376,7 @@ namespace Jazz_Tools
             tempPlanetMap.buildingID = "";
             tempPlanetMap.buildingName = "";
             tempPlanetMap.buildingLevel = "";
+            tempPlanetMap.efficiency = "";
             tempPlanetMap.imageName = "";
 
             if (btnButton.x == 0 && btnButton.y == 0)
@@ -355,29 +388,44 @@ namespace Jazz_Tools
                 tempPlanetMap.buildingID = btnButton.buildingID;//moving building into temp storage
                 tempPlanetMap.buildingName = btnButton.buildingName;
                 tempPlanetMap.buildingLevel = btnButton.buildingLevel;
+                tempPlanetMap.efficiency = btnButton.efficiency;
                 tempPlanetMap.imageName = btnButton.imageName;
 
                 btnButton.buildingID = ""; //clearing button storage before new info is written in
                 btnButton.buildingName = "";
                 btnButton.imageName = "";
                 btnButton.buildingLevel = "";
-                btnButton.BackgroundImage = imageListBuildingImages.Images["blank.png"];//sets the default image
+                btnButton.efficiency = "";
+                btnButton.Image = imageListBuildingImages.Images["blank.png"];
+                
+                //btnButton.BackgroundImage = imageListBuildingImages.Images["blank.png"];//sets the default image
 
                 btnButton.buildingID = labelBuildingID.Text;//moves the label info into the empty button
                 btnButton.buildingName = labelBuildingName.Text;
                 btnButton.Text = labelBuildingLevel.Text;
                 btnButton.buildingLevel = labelBuildingLevel.Text;
+                btnButton.efficiency = labelBuildingEfficiency.Text;
                 btnButton.imageName = labelImageName;
-                btnButton.BackgroundImage = imageListBuildingImages.Images[labelImageName];
+                btnButton.Image = imageListBuildingImages.Images[labelImageName];
 
                 labelBuildingID.Text = tempPlanetMap.buildingID;//label updating
                 labelBuildingName.Text = tempPlanetMap.buildingName;
                 labelBuildingLevel.Text = tempPlanetMap.buildingLevel;
-                labelBuildingLevel.Text = tempPlanetMap.buildingLevel;
+                labelBuildingEfficiency.Text = tempPlanetMap.efficiency;
+                //labelBuildingLevel.Text = tempPlanetMap.buildingLevel;
                 labelImageName = tempPlanetMap.imageName;
                 buildingPictureBox.Image = imageListBuildingImages.Images[tempPlanetMap.imageName];
                 labelBuildingX.Text = Convert.ToString(btnButton.x);
                 labelBuildingY.Text = Convert.ToString(btnButton.y);
+                if (labelBuildingID.Text == "")
+                {
+                    labelBuildingID.Text = "Building ID";
+                    labelBuildingName.Text = "Building Name";
+                    labelBuildingLevel.Text = "Building Level";
+                    labelBuildingEfficiency.Text = "Efficiency";
+                    labelBuildingX.Text = "x";
+                    labelBuildingY.Text = "y";
+                }
 
             }
 
@@ -385,6 +433,9 @@ namespace Jazz_Tools
 
         private void buttonRearrangeBuildings_Click(object sender, EventArgs e)
         {
+            if (labelBuildingID.Text == "Building ID")
+            {
+            labelStatusText.Text = "Rearranging Buildings";
             var result = from v in buttonArray // finds all the buildings in the array and puts them into result
                          where v.buildingID != "" && v.buildingID != null //check if this is And or Or
                          select v.buttonArrayIndex;
@@ -401,35 +452,11 @@ namespace Jazz_Tools
                 j++;
                 arrangement[j] = buttonArray[i].y.ToString();
                 j++;
-                // ****Need to write a loop that will sequentialy write each of these items into an array
 
-                /*arrangement[j] = new classBuildingsBeingMovedHash();
-                arrangement[j].id = buttonArray[i].buildingID;
-                arrangement[j].x = buttonArray[i].x;
-                arrangement[j].y = buttonArray[i].y;
-                 * */
-                //j++;
             }
             le.BodyRearrangeBuildings(cbPlanetsList.SelectedValue.ToString(), arrangement);
-            //rewrite this section
-
-            /*JavaScriptSerializer js = new JavaScriptSerializer();
-            BasicRequest movingBuildings = new BasicRequest();
-            requestType = "rearrange_buildings";
-            movingBuildings.method = requestType;
-            string arrangementHash = js.Serialize(arrangement);
-            arrangementHash = "," + arrangementHash;
-            movingBuildings.@params = new String[] { sessionId, body_id };
-            string json = js.Serialize(movingBuildings);
-            int jsonLength = json.Length;
-            jsonLength = jsonLength - 2;
-            json = json.Insert(jsonLength, arrangementHash);
-            string uri = url + "body";
-            richTextBoxServerRequest.Text = json;//a test line to check the json
-            //MessageBox.Show(json);
-            string response = ConnectionManager(json, uri);
-            MessageBox.Show("Your building have been moved successfully.");
-             * */
+            labelStatusText.Text = "rearrangement sent";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -457,6 +484,7 @@ namespace Jazz_Tools
         private void cbPlanetsList_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             //MessageBox.Show("selected index changed"); 
+            labelStatusText.Text = "Selected Planet Changed";
             ClearPlanetMap();
             le.BodyGetBuildings(cbPlanetsList.SelectedValue.ToString());
             le.ServerResponseEvent += (senderR, eR) =>
@@ -464,28 +492,21 @@ namespace Jazz_Tools
                     Response r = eR as Response;
                     if (r.id == 402)
                     {
+                        currentPlanetResponse = r;
+                        //labelStatusText = "Food: " + currentPlanetResponse.result.buildings.
                         //Dictionary<string, r.result.buildings> Buildings = r.result.buildings;
                         //MapBuildingInfoToArrayPlanetMap(r.result.buildings);
                         PopulatePlanetMap(r.result.buildings);
+
                     }
                 };
-            /*
-             *             requestType = "get_buildings";
-            //BasicRequest basicServerRequest = new BasicRequest();
-            basicServerRequest.method = requestType;
-            string bodyId = Convert.ToString(cbPlanetsList.SelectedValue);
-            body_id = bodyId;//sets the form variable body_id which is used when sending the rearranged buildings
-            basicServerRequest.@params = new string[] { sessionId, bodyId };
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            string json = js.Serialize(basicServerRequest); //serializes the login request
-            string uri = url + "body";
-            string response = ConnectionManager(json, uri);
-            Get_Buildings getBuildings = js.Deserialize<Get_Buildings>(response);
-            PopulatePlanetMap(getBuildings.result.buildings);
-             * */
              
         }
+        private void RepairBuildings()
+        {
 
+        
+        }
 
 
 

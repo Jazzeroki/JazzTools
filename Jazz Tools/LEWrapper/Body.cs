@@ -23,7 +23,7 @@ namespace LE_Wrapper
             int id = 402;
             string method = "get_buildings";
             JsonTextWriter r = Request(id, method, sessionID.ToString(), bodyID);
-            PostAsync(bodyURL, r);
+            var d = PostAsync(bodyURL, r);
         }
         public void BodyRearrangeBuildings(string bodyID, string[] arrangement) //need to test to ensure that it works.  
         {
@@ -33,7 +33,7 @@ namespace LE_Wrapper
             r.WriteStartArray();
             for (int i = 0; i < arrangement.Length; i += 3)
                 AddHashedParameters(r, "id", arrangement[i],"x", arrangement[i + 1],"y", arrangement[i + 2]);
-            Post(bodyURL, r);
+            var d = PostAsync(bodyURL, r);
         }
         public void BodyGetBuildable(string bodyID, string x, string y, string tag)
         {

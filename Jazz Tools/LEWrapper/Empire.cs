@@ -18,7 +18,7 @@ namespace LE_Wrapper
             int id = 101;
             string method = "login";
             JsonTextWriter r = Request(id, method, empire, password, API_KEY);
-            PostAsync(Empire_url, r);
+            var d = PostAsync(Empire_url, r);
         }
         public void EmpireLogout() 
         {
